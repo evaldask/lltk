@@ -50,7 +50,9 @@ class Smmry(object):
         for word in splitted:
             stemmed.append(self.__stemmer.stem(word))
 
-        stemmed = filter(None, stemmed)
+        # remove insignificant elements such as:
+        # dots, commas, words that are two or single letters and etc.
+        stemmed = filter(lambda x: len(x) > 2, stemmed)
         tokens_counter = Counter(stemmed)
 
         sentences = self.__splitter.split(text)
