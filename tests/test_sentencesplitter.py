@@ -5,7 +5,7 @@ Unit tests for testing SentenceSplitter class
 """
 
 
-from lltk.sentencesplitter import SentenceSplitter
+from lltk import SentenceSplitter
 
 
 def test_sentencesplitter():
