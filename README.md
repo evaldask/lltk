@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/evalkaz/lltk.svg?branch=master)](https://travis-ci.org/evalkaz/lltk)
+
 # LLTK
 ## Lithuanian Language ToolKit
 
