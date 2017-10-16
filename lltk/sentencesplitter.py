@@ -202,7 +202,6 @@ class SentenceSplitter(object):
             # if contains % 2 == 1:
             #    is_quote = not is_quote
 
-            if len(words[-1].replace(' ', '').replace('.', '')) == 1:
-                add_next = True
+            add_next = len(words[-1].replace(' ', '').replace('.', '')) == 1
 
         return results

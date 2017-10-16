@@ -5,7 +5,7 @@ Unit tests for testing SentenceSplitter class
 """
 
 
-from lltk.stemmer import Stemmer
+from lltk import Stemmer
 
 
 def test_stemmer():

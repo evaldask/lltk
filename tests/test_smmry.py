@@ -5,10 +5,10 @@ Unit tests for testing SentenceSplitter class
 """
 
 
-from lltk.smmry import Smmry
+from lltk import Smmry
 
 
-def test_smmryr():
+def test_smmry():
 
     """
     This test is to check how if smmry algorithm performs.
