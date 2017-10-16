@@ -27,7 +27,7 @@ class Smmry(object):
 
     def summarize(self, text, top_sentences=5, top_words=5):
         """
-        Note:
+        Notes:
             Picks sentences that have most common words in text and returns top
             sentences and most common words
         Args:
@@ -36,10 +36,10 @@ class Smmry(object):
             top_words: number of top words to return
 
         Returns:
-            common_sentences: array of tuples that contains sentences (in order) and
-                score for that sentence
-            common_words: array of tuples that contain word (stemmed) and number of
-                how many times it has been repeated in text
+            common_sentences: array of tuples that contains sentences
+                (in order) and score for that sentence
+            common_words: array of tuples that contain word (stemmed) and
+                number of how many times it has been repeated in text
         """
 
         text = text.replace(u'“', '"').replace(

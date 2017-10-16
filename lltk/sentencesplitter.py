@@ -173,7 +173,7 @@ class SentenceSplitter(object):
 
     def split(self, text):
         """
-        Note:
+        Notes:
             Splits given text into sentences
         Args:
             text: string element that contain sentences
@@ -196,7 +196,8 @@ class SentenceSplitter(object):
 
             words = sentence.split(' ')
 
-            # uncomment for keeping quote in same sentence. NOTE: does not work perfectly
+            # uncomment for keeping quote in same sentence.
+            # NOTE: does not work perfectly
             # contains = sentence.count('"') + sentence.count("'")
             # if contains % 2 == 1:
             #    is_quote = not is_quote

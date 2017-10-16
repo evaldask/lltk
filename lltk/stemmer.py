@@ -312,7 +312,7 @@ class Stemmer(object):
 
     def __step1(self, word):
         """
-        Note:
+        Notes:
             Removes endings in words
         Args:
             word: string element that contain single word
@@ -328,7 +328,7 @@ class Stemmer(object):
 
     def __step2(self, word):
         """
-        Note:
+        Notes:
             Removes suffixes in words
         Args:
             word: string element that contain single word
@@ -345,7 +345,7 @@ class Stemmer(object):
 
     def __replace(self, word, items):
         """
-        Note:
+        Notes:
             If word contains element that equal tuple[0] in items array
             that element is replaced with tuple[1] value
         Args:
@@ -365,7 +365,7 @@ class Stemmer(object):
 
     def __fix_conflicts(self, word):
         """
-        Note:
+        Notes:
             Fixes word endings
         Args:
             word: string element that contain single word
@@ -391,7 +391,7 @@ class Stemmer(object):
 
     def __fix_chdz(self, word):
         """
-        Note:
+        Notes:
             Fixed č / dž problem in word
         Args:
             word: string element that contain single word
@@ -408,7 +408,7 @@ class Stemmer(object):
 
     def __fix_gd(self, word):
         """
-        Note:
+        Notes:
             Fixed gd problem in word
         Args:
             word: string element that contain single word
@@ -424,7 +424,7 @@ class Stemmer(object):
 
     def stem(self, word):
         """
-        Note:
+        Notes:
             Stems given word
         Args:
             word: string element that contain single word
