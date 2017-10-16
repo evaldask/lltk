@@ -232,7 +232,8 @@ class Stemmer(object):
             u'tųs',
             u'simės',
             u'sitės',
-            u'kite'
+            u'kite',
+            u'aitė'
         ]
 
         self.__step1_items = frozenset(step1_items)
@@ -302,7 +303,9 @@ class Stemmer(object):
             u'auj',
             u'jam',
             u'iau',
-            u'am'
+            u'am',
+            u'uk',
+            u'es'
         ]
 
         self.__step2_items = frozenset(step2_items)
@@ -320,11 +323,10 @@ class Stemmer(object):
         Returns:
             word: word without ending or same word that was passed
         """
-        for i in range(self.__step1_max, self.__step1_min, -1):
-            if word[-i:] in self.__step1_items:
-                return word[:-i]
-
-        return word
+        return self.__perform_step(word,
+                                   self.__step1_min,
+                                   self.__step1_max,
+                                   self.__step1_items)
 
     def __step2(self, word):
         """
@@ -337,10 +339,28 @@ class Stemmer(object):
             word: word without suffix or same word that was passed
         """
 
-        for i in range(self.__step2_max, self.__step2_min, -1):
-            if word[-i:] in self.__step2_items:
-                return word[:-i]
+        return self.__perform_step(word,
+                                   self.__step2_min,
+                                   self.__step2_max,
+                                   self.__step2_items)
 
+    def __perform_step(self, word, min_val, max_val, items):
+        """
+        Notes:
+            Removes part of word ending
+        Args:
+            word: string element that contain single word
+            min_val: minimum length of item
+            max_val: maximum length of item
+            items: array of string elements that should not be in given word
+
+        Returns:
+            word: word without items element or same word that was passed
+        """
+        for i in range(max_val, min_val, -1):
+
+            if word[-i:] in items:
+                return word[:-i]
         return word
 
     def __replace(self, word, items):

@@ -25,6 +25,26 @@ class Smmry(object):
         self.__stemmer = Stemmer()
         self.__splitter = SentenceSplitter()
 
+    def __create_counter(self, words):
+        """
+        Notes:
+            Creates Counter from words array
+        Args:
+            words: array of string words for Counter
+
+        Returns:
+            counter: Counter object that contains stemmed words
+        """
+        stemmed = []
+        for word in words:
+            stemmed.append(self.__stemmer.stem(word))
+
+        # remove insignificant elements such as:
+        # dots, commas, words that are two or single letters and etc.
+        stemmed = filter(lambda x: len(x) > 2, stemmed)
+        counter = Counter(stemmed)
+        return counter
+
     def summarize(self, text, top_sentences=5, top_words=5):
         """
         Notes:
@@ -45,18 +65,12 @@ class Smmry(object):
         text = text.replace(u'“', '"').replace(
             u'„', '"').replace(u'–', '-').replace('\n', '')
         cleaned = re.sub(r'[?|$|.|!|-|,|"|:|;]', r'', text).lower()
-        splitted = cleaned.split(' ')
-        stemmed = []
-        for word in splitted:
-            stemmed.append(self.__stemmer.stem(word))
+        words = cleaned.split(' ')
 
-        # remove insignificant elements such as:
-        # dots, commas, words that are two or single letters and etc.
-        stemmed = filter(lambda x: len(x) > 2, stemmed)
-        tokens_counter = Counter(stemmed)
-
+        tokens_counter = self.__create_counter(words)
         sentences = self.__splitter.split(text)
         sentences_counter = Counter()
+
         for idx, sentence in enumerate(sentences):
             cleaned_sentence = re.sub(
                 r'[?|$|.|!|-|,|"|:|;]', r'', sentence).lower()

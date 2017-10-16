@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/evalkaz/lltk.svg?branch=master)](https://travis-ci.org/evalkaz/lltk)
-[![Coverage Status](https://coveralls.io/repos/github/evalkaz/lltk/badge.svg?branch=test-env)](https://coveralls.io/github/evalkaz/lltk?branch=test-env)
+[![Coverage Status](https://coveralls.io/repos/github/evalkaz/lltk/badge.svg?branch=master)](https://coveralls.io/github/evalkaz/lltk?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4e89dbec23839b2b8855/maintainability)](https://codeclimate.com/github/evalkaz/lltk/maintainability)
 
 # LLTK
 ## Lithuanian Language ToolKit
