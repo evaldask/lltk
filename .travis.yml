@@ -6,6 +6,9 @@ python:
 
 install:
     - pip install -r requirements-dev.txt
-
+    - pip install coveralls
 script:
     - pytest
+
+after_success:
+    - coveralls
