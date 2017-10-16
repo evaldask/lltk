@@ -232,7 +232,8 @@ class Stemmer(object):
             u'tųs',
             u'simės',
             u'sitės',
-            u'kite'
+            u'kite',
+            u'aitė'
         ]
 
         self.__step1_items = frozenset(step1_items)
@@ -302,7 +303,9 @@ class Stemmer(object):
             u'auj',
             u'jam',
             u'iau',
-            u'am'
+            u'am',
+            u'uk',
+            u'es'
         ]
 
         self.__step2_items = frozenset(step2_items)
