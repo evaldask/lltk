@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/evalkaz/lltk.svg?branch=master)](https://travis-ci.org/evalkaz/lltk)
+
 # LLTK
 ## Lithuanian Language ToolKit
 
@@ -15,7 +17,7 @@ Stemming and splitting is based on [TokenMill](https://github.com/tokenmill) wor
 * Fork the project
 * Clone your forked project:
 ```
-$ git clone git@github.com:<yougithubuser>/lltk.git
+$ git clone git@github.com:evalkaz/lltk.git
 ```
 * Install development dependencies:
 ```
