@@ -14,7 +14,7 @@ install:
     - pip install coveralls
 script:
     - pytest
-    - codeclimate-test-reporter --file .coverage
+    - ./cc-test-reporter --file .coverage
 
 after_success:
     - coveralls
