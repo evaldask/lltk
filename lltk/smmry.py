@@ -70,7 +70,7 @@ class Smmry(object):
         tokens_counter = self.__create_counter(words)
         sentences = self.__splitter.split(text)
         sentences_counter = Counter()
-        
+
         for idx, sentence in enumerate(sentences):
             cleaned_sentence = re.sub(
                 r'[?|$|.|!|-|,|"|:|;]', r'', sentence).lower()
